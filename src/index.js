@@ -7,10 +7,14 @@ import i18n from "i18next"
 import languageDetector from "i18next-browser-languagedetector"
 import Backend from "i18next-xhr-backend"
 import {reactI18nextModule} from "react-i18next"
+import React from "react"
+import ReactDOM from "react-dom"
+import App from "./App"
 
 $(document).ready(() => {
     M.Parallax.init($(".parallax"));
     M.Sidenav.init($(".sidenav-trigger"));
+    M.Sidenav.init($(".sidenav"));
     M.Carousel.init($(".carousel"), {
         fullWidth: false,
         padding: 100,
@@ -38,3 +42,8 @@ i18n
     });
 
  registerServiceWorker();
+
+ ReactDOM.render(
+     <App/>,
+     document.getElementById("root")
+ );
