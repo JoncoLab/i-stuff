@@ -11,18 +11,6 @@
     <link href="./style.css" rel="stylesheet"/>
     <link href="fonts.css" rel="stylesheet"/>
     <title>iStaff</title>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-    <script>
-        let config = {
-            apiKey: "AIzaSyCZznDaMxAe8MzMQlpFXx8SG_iKLOWRGGo",
-            authDomain: "i-staff.firebaseapp.com",
-            databaseURL: "https://i-staff.firebaseio.com",
-            projectId: "i-staff",
-            storageBucket: "i-staff.appspot.com",
-            messagingSenderId: "141915387124"
-        };
-        firebase.initializeApp(config);
-    </script>
 </head>
 <body>
 <div class="introduction-top container">
@@ -31,13 +19,6 @@
         <h2 class="flow-text light col m4 push-m2 right-align black-text">MADE SIMPLE</h2>
     </div>
 </div>
-
-<ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-</ul>
 
 <div class="parallax-container" id="index-banner main-screen main">
     <nav role="navigation" id="header">
@@ -48,7 +29,6 @@
                 <li><a class="white-text" href="#our-partners">Our Partners</a></li>
                 <li><a class="white-text" href="#our-employers">Our Employees</a></li>
                 <li><a class="white-text" href="#contact-us">Contact Us</a></li>
-                <li><a class="white-text dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </div>
     </nav>
@@ -168,5 +148,17 @@
     <div class="parallax"><img width="100" src="img/contact-us-bg.jpg" alt="Unsplashed background img 2"></div>
 </div>
 <div id="root"></div>
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+    let config = {
+        apiKey: "AIzaSyCZznDaMxAe8MzMQlpFXx8SG_iKLOWRGGo",
+        authDomain: "i-staff.firebaseapp.com",
+        databaseURL: "https://i-staff.firebaseio.com",
+        projectId: "i-staff",
+        storageBucket: "i-staff.appspot.com",
+        messagingSenderId: "141915387124"
+    };
+    firebase.initializeApp(config);
+</script>
 </body>
 </html>

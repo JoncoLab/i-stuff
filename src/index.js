@@ -13,7 +13,6 @@ import App from "./App"
 
 $(document).ready(() => {
     M.Parallax.init($(".parallax"));
-    M.Sidenav.init($(".sidenav-trigger"));
     M.Sidenav.init($(".sidenav"));
     M.Carousel.init($(".carousel"), {
         fullWidth: false,
