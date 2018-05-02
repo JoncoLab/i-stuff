@@ -8,6 +8,7 @@ import ReactDOM from "react-dom"
 import App from "./App"
 
 $(document).ready(() => {
+    M.Modal.init($(".modal"));
     M.Parallax.init($(".parallax"));
     M.Sidenav.init($(".sidenav"));
     M.Carousel.init($(".carousel"), {

@@ -4,7 +4,7 @@ export class SideBar extends React.Component {
     render() {
         return (
             <Fragment>
-                <nav> a;sldjfb aks;djfh lakusdfgkd fkdugfk jf </nav>
+                <nav><button data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></button></nav>
 
                 <ul id="slide-out" className="sidenav">
                     <li><div className="user-view">
@@ -21,7 +21,6 @@ export class SideBar extends React.Component {
                     <li><a className="subheader">Subheader</a></li>
                     <li><a className="waves-effect" href="#!">Third Link With Waves</a></li>
                 </ul>
-                <a href="#" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></a>
             </Fragment>
         )
     }
