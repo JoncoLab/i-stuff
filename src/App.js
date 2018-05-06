@@ -6,7 +6,7 @@ import {Content} from "./content/content"
 class App extends React.Component {
     render() {
         return (
-            <div className="App">
+            <div className="App grey lighten-3">
                 <SideBar/>
                 <Content/>
             </div>

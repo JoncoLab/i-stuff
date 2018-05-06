@@ -4,7 +4,10 @@ import {Item} from "./Item";
 export class Content extends React.Component {
     render() {
         return (
-            <div className="container section">
+            <div className="section content">
+                <Item/>
+                <Item/>
+                <Item/>
                 <Item/>
                 <Item/>
                 <Item/>
