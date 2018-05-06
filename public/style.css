@@ -112,27 +112,27 @@ body {
     padding: 0;
     margin: 0;
 }
-#root .App .content .item-preview .row #caption {
-    font-size: 2em;
-    font-family: "Lato", sans-serif;
-    font-weight: bold;
+#root .App .content .item-preview .row .item-preview-caption {
+    font-family: "Lato-Bold", sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 1.2px;
 }
-#root .App .content .item-preview .row #location {
+#root .App .content .item-preview .row .item-preview-location {
+    font-size: 1.2em;
+    font-family: "Open-Sans", sans-serif;
+}
+#root .App .content .item-preview .row .item-preview-date {
+    font-size: 1.1em;
+    font-family: "Lato", sans-serif;
+}
+#root .App .content .item-preview .row .item-preview-category {
     font-size: 1.3em;
-    font-family: "Open-Sans", sans-serif;
-}
-#root .App .content .item-preview .row #date {
-    font-size: 1.1em;
     font-family: "Lato", sans-serif;
 }
-#root .App .content .item-preview .row #category {
-    font-size: 1.4em;
-    font-family: "Lato", sans-serif;
-}
-#root .App .content .item-preview .row #description {
-    font-size: 1.1em;
+#root .App .content .item-preview .row .item-preview-description {
     font-family: "Open-Sans", sans-serif;
-    letter-spacing: 1.1px;
+    font-size: 1.1em;
+    letter-spacing: 0.8px;
     padding: 0 15px;
     margin: 0;
     white-space: nowrap;
@@ -148,6 +148,43 @@ body {
     padding: 0 25px;
     margin: 25px 0;
     border-right: 1px solid #c2c2c2;
+}
+#root .App .content .item .row .description .row .item-caption {
+    font-family: "Lato-Bold", sans-serif;
+    font-size: 2em;
+    letter-spacing: 1.2px;
+}
+#root .App .content .item .row .description .row .item-share span {
+    font-family: "Open-Sans-Light", sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.8px;
+    border-left: 1px solid #424242;
+    padding: 0 10px;
+}
+#root .App .content .item .row .description .title span {
+    font-family: "Lato", sans-serif;
+    font-size: 1.4em;
+    letter-spacing: 1.2px;
+}
+#root .App .content .item .row .description .item-description {
+    font-family: "Open-Sans", sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 0.8px;
+    line-height: 1.8;
+}
+#root .App .content .item .row .description .responsibilities h4,
+#root .App .content .item .row .description .requirements h4,
+#root .App .content .item .row .description .nice-to-have h4 {
+    font-family: "Lato", sans-serif;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+#root .App .content .item .row .description .responsibilities ul,
+#root .App .content .item .row .description .requirements ul,
+#root .App .content .item .row .description .nice-to-have ul {
+    font-family: "Open-Sans", sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.8px;
 }
 #root .App .content .item .apply {
     padding: 35px 25px;
@@ -176,6 +213,128 @@ body {
     font-size: 1.3em;
     font-family: "Lato", sans-serif;
     letter-spacing: 1.1px;
+    margin-bottom: 40px;
+}
+#root .App .content .item .apply .popout-enabled {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+}
+#root .App .content .item .apply .popout-disabled {
+    display: none;
+    z-index: 0;
+}
+#root .App .content .item .apply .popout-enabled .popout-content {
+    background: white;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#root .App .content .item .apply .popout-enabled .popout-content h3 {
+    padding: 20px 0;
+    font-size: 1.6em;
+    font-family: "Open-Sans-Light", sans-serif;
+    letter-spacing: 1.2px;
+    width: 100%;
+    margin: 0;
+}
+#root .App .content .item .apply .popout-enabled .popout-content input:not(#cv) {
+    padding: 10px 7px;
+    margin: 15px 0;
+    width: 90%;
+    font-size: 0.95em;
+    font-family: "Open-Sans-Light", sans-serif;
+    color: #212121;
+    letter-spacing: 1.2px;
+    box-sizing: border-box;
+}
+#root .App .content .item .apply .popout-enabled .popout-content input:not(#cv):focus {
+    border-bottom: 1px solid #212121;
+    box-shadow: 0 1px 0 0 #212121;
+}
+#root .App .content .item .apply .popout-enabled .popout-content input::placeholder {
+    font-family: "Open-Sans-Light", sans-serif;
+    color: #212121;
+    letter-spacing: 1.2px;
+}
+#root .App .content .item .apply .popout-enabled .popout-content #cv {
+    display: none;
+}
+#root .App .content .item .apply .popout-enabled .popout-content label {
+    font-size: 1.1em;
+    font-family: "Open-Sans", sans-serif;
+    letter-spacing: 1.2px;
+    color: #616161;
+    text-align: center;
+    width: 90%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border: 1px solid #616161;
+    border-radius: 7px;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+#root .App .content .item .apply .popout-enabled .popout-content label:hover {
+    border-color: #212121;
+    color: #212121;
+}
+#root .App .content .item .apply .popout-enabled .popout-content button {
+    padding: 15px 0;
+    font-size: 1.1em;
+    font-family: "Lato", sans-serif;
+    letter-spacing: .9px;
+    text-transform: uppercase;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+#root .App .content .item .apply .popout-enabled .popout-content .cancel:hover {
+    background-color: #eaeaea !important;
+}
+#root .App .content .item .apply .popout-enabled .popout-content #submit:hover {
+    background-color: #6fc573 !important;
+}
+#root .App .content .item .apply .back-link {
+    outline: 0;
+    font-size: 1.4em;
+    font-family: "Open-Sans", sans-serif;
+    letter-spacing: 0.8px;
+    background: transparent;
+    text-align: right;
+    border: 1px solid #424242;
+    border-radius: 4px;
+    width: 100%;
+    padding: 15px 0;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+#root .App .content .item .apply .back-link i {
+    font-size: 1.4em;
+    padding: 0 5px 0 20px;
+    margin-left: 10px;
+}
+#root .App .content .item .apply .back-link:hover {
+    color: #2d2d2d;
+    border-color: #2d2d2d;
 }
 @media only screen and (max-width: 992px) {
     .parallax-container {
