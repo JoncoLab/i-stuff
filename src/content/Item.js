@@ -7,7 +7,14 @@ export class Item extends React.Component {
         this.state = {
             itemActive: false,
             hideItems: "block",
-            popOutActive: false
+            popOutActive: false,
+            vacancyData: {
+                name: this.props.name,
+                category: this.props.category,
+                location: this.props.location,
+                date: this.props.date,
+                description: this.props.description
+            }
         };
 
         this.itemEvent = this.itemEvent.bind(this);
@@ -32,20 +39,14 @@ export class Item extends React.Component {
                     <div className="row">
                         <div className="description col s12 m9">
                             <div className="row">
-                                <span className="item-caption flow-text grey-text text-darken-4 left-align col s8">Senior front-end position</span>
+                                <span className="item-caption flow-text grey-text text-darken-4 left-align col s8">{this.state.vacancyData.name}</span>
                                 <div className="item-share col s2"><span className="flow-text grey-text text-darken-2">Share</span></div>
                             </div>
                             <div className="title">
-                                <span className="flow-text grey-text text-darken-3">Category: Web-development</span><br/>
-                                <span className="flow-text grey-text text-darken-3">Location: Varosh, Ukraine</span>
+                                <span className="flow-text grey-text text-darken-3">Category: {this.state.vacancyData.category}</span><br/>
+                                <span className="flow-text grey-text text-darken-3">Location: {this.state.vacancyData.location}</span>
                             </div>
-                            <p className="item-description flow-text grey-text text-darken-3 left-align">
-                                Kuhli loach codling frilled shark California halibut plownose chimaera--scat Reedfish;
-                                California flyingfish rockfish stream catfish flying gurnard, "plownose chimaera."
-                                Alaska blackfish tubeblenny yellowtail clownfish kahawai soldierfish tench smalleye squaretail.
-                                Perch sheatfish, mosshead warbonnet halfbeak tope slimy mackerel zebra lionfish
-                                sleeper trout Reef triggerfish false brotula.
-                            </p>
+                            <p className="item-description flow-text grey-text text-darken-3 left-align">{this.state.vacancyData.description}</p>
                             <div className="responsibilities">
                                 <h4 className="flow-text grey-text text-darken-3 left-align">Responsibilities:</h4>
                                 <ul className="flow-text grey-text text-darken-3">
@@ -102,13 +103,13 @@ export class Item extends React.Component {
             content = (
                 <div  className="item-preview content grey lighten-5 z-depth-2" onClick={this.itemEvent} style={{display: this.state.hideItems}}>
                     <div className="row">
-                        <span className="item-preview-caption flow-text grey-text text-darken-4 col s12 m6">Front-end developer</span>
-                        <span className="item-preview-location flow-text grey-text text-darken-1 col s6 m3 center-align">Varosh, Ukraine</span>
-                        <span className="item-preview-date flow-text grey-text text-darken-1 col s6 m3 center-align">16 hours ago</span>
-                        <span className="item-preview-category flow-text grey-text text-darken-2 col s12 sup-caption">IT/ Web-development</span>
+                        <span className="item-preview-caption flow-text grey-text text-darken-4 col s12 m6">{this.state.vacancyData.name}</span>
+                        <span className="item-preview-location flow-text grey-text text-darken-1 col s6 m3 center-align">{this.state.vacancyData.location}</span>
+                        <span className="item-preview-date flow-text grey-text text-darken-1 col s6 m3 center-align">{this.state.vacancyData.date}</span>
+                        <span className="item-preview-category flow-text grey-text text-darken-2 col s12 sup-caption">{this.state.vacancyData.category}</span>
                     </div>
                     <div className="row">
-                        <p className="item-preview-description flow-text grey-text text-darken-3 left-align col s12">asdf asdlfiwe welirho hslajdf vkdb werbb erwkejksd skdjfew wekr msdf asdf asdlfiwe welirho hslajdf vkdb werbb</p>
+                        <p className="item-preview-description flow-text grey-text text-darken-3 left-align col s12">{this.state.vacancyData.description}</p>
                     </div>
                 </div>
             );
@@ -117,7 +118,11 @@ export class Item extends React.Component {
     }
 
     render() {
-        console.log(this.state.popOutActive)
+        console.log(this.state.vacancyData.name)
+        console.log(this.state.vacancyData.category)
+        console.log(this.state.vacancyData.location)
+        console.log(this.state.vacancyData.date)
+        console.log(this.state.vacancyData.description)
         return this.itemRender()
     }
 }
