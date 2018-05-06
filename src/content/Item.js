@@ -1,41 +1,45 @@
 import React from "react"
-import * as $ from "jquery"
-import * as M from "materialize-css"
 
 export class Item extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            active: false
+            itemActive: false,
+            hideItems: "block",
+            popOutActive: false
         };
 
         this.itemEvent = this.itemEvent.bind(this);
+        this.popOurEvent = this.popOurEvent.bind(this);
         this.itemRender = this.itemRender.bind(this);
     }
-
     itemEvent() {
         this.setState({
-            active: !this.state.active
+            itemActive: !this.state.itemActive
         });
     }
-
+    popOurEvent() {
+        this.setState({
+            popOutActive: !this.state.popOutActive
+        });
+    }
     itemRender() {
         let content;
-        if(this.state.active === true) {
+        if(this.state.itemActive === true) {
             content = (
                 <div className="item grey lighten-5 z-depth-2">
                     <div className="row">
-                        <div className="description col s12 m8">
+                        <div className="description col s12 m9">
                             <div className="row">
-                                <h2 className="flow-text grey-text text-darken-3 left-align col s8">Job Description</h2>
-                                <span className="flow-text grey-text text-darken-1 right-align col s4">Share</span>
+                                <span className="item-caption flow-text grey-text text-darken-4 left-align col s8">Senior front-end position</span>
+                                <div className="item-share col s2"><span className="flow-text grey-text text-darken-2">Share</span></div>
                             </div>
                             <div className="title">
-                                <h4>Title: <span id="title">VARIABLE</span></h4>
-                                <h4>Location: <span id="locations">VARIABLE</span></h4>
+                                <span className="flow-text grey-text text-darken-3">Category: Web-development</span><br/>
+                                <span className="flow-text grey-text text-darken-3">Location: Varosh, Ukraine</span>
                             </div>
-                            <p className="flow-text grey-text text-darken-3 left-align">
+                            <p className="item-description flow-text grey-text text-darken-3 left-align">
                                 Kuhli loach codling frilled shark California halibut plownose chimaera--scat Reedfish;
                                 California flyingfish rockfish stream catfish flying gurnard, "plownose chimaera."
                                 Alaska blackfish tubeblenny yellowtail clownfish kahawai soldierfish tench smalleye squaretail.
@@ -44,7 +48,7 @@ export class Item extends React.Component {
                             </p>
                             <div className="responsibilities">
                                 <h4 className="flow-text grey-text text-darken-3 left-align">Responsibilities:</h4>
-                                <ul>
+                                <ul className="flow-text grey-text text-darken-3">
                                     <li>Manage backup services for Data Center and Remote (WAN attached) Servers</li>
                                     <li>Proactively manage server performance.</li>
                                     <li>Proactively manage storage performance.</li>
@@ -68,44 +72,43 @@ export class Item extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col s12 m3 push-m1 apply">
+                        <div className="col s12 m3 apply">
                             <div className="row">
                                 <span className="flow-text grey-text text-darken-1 col s12 left-align" id="apply-date">16 hours ago</span>
                                 <span className="flow-text grey-text text-darken-3 col s12" id="apply-caption">Front-end developer</span>
                                 <span className="flow-text grey-text text-darken-2 col s12 sup-caption" id="apply-category">IT/ Web-development</span>
                                 <span className="flow-text grey-text text-darken-1 col s12 left-align" id="apply-location">Varosh, Ukraine</span>
                             </div>
-                            <button
-                                data-trget="modal1"
-                                className="btn modal-trigger col s12 btn-large green lighten-1"
-                                onClick={() => $("#modal1").modal("open")}
-                            >Apply</button>
-                            <div id="modal1" className="modal">
-                                <form className="modal-content row" method="POST">
-                                    <input className="col s12" type="email" name="email" id="email" placeholder="Enter your e-mail" required={true}/>
-                                    <input className="col s6" name="first-name" id="first-name" placeholder="Enter your first-name" required={true}/>
-                                    <input className="col s6" name="last-name" id="last-name" placeholder="Enter your last-name" required={true}/>
-                                    <input className="col s12" type="tel" name="tel" id="tel" placeholder="Enter your phone number" required={true}/>
+                            <button className="btn col s12 btn-large green lighten-1" onClick={this.popOurEvent}>Apply</button>
+                            <div className={this.state.popOutActive ? "popout-enabled row" : "popout-disabled"}>
+                                <form className="popout-content" encType="multipart/form-data" method="POST">
+                                    <h3 className="col s12 flow-text grey darken-4 white-text center-align">Send Us e-mail and we'll contact You</h3>
+                                    <input type="email" name="email" id="email" placeholder="E-mail" required={true}/>
+                                    <input name="first-name" id="first-name" placeholder="First name" required={true}/>
+                                    <input name="last-name" id="last-name" placeholder="Last name" required={true}/>
+                                    <input type="tel" name="tel" id="tel" placeholder="Mobile number (optional)" required={false}/>
+                                    <label htmlFor="cv">Attach your CV file</label>
+                                    <input type="file" name="cv" id="cv"/>
+                                    <button className="grey lighten-2 grey-text text-darken-4 cancel" type="button" onClick={this.popOurEvent}>Close</button>
+                                    <button className="white-text green lighten-1" type="submit" id="submit">Send</button>
                                 </form>
-                                <div className="modal-footer">
-                                    <button className="waves-effect waves-light btn" type="submit" id="submit">Send</button>
-                                </div>
                             </div>
+                            <button className="valign-wrapper back-link flow-text grey-text text-darken-3" onClick={this.itemEvent}><i className="material-icons">arrow_back</i> Back to all vacancies</button>
                         </div>
                     </div>
                 </div>
             );
-        } else if(this.state.active === false) {
+        } else if(this.state.itemActive === false) {
             content = (
-                <div  className="item-preview content grey lighten-5 z-depth-2" onClick={this.itemEvent}>
+                <div  className="item-preview content grey lighten-5 z-depth-2" onClick={this.itemEvent} style={{display: this.state.hideItems}}>
                     <div className="row">
-                        <span className="flow-text grey-text text-darken-3 col s12 m6" id="caption">Front-end developer</span>
-                        <span className="flow-text grey-text text-darken-1 col s6 m3 center-align" id="location">Varosh, Ukraine</span>
-                        <span className="flow-text grey-text text-darken-1 col s6 m3 center-align" id="date">16 hours ago</span>
-                        <span className="flow-text grey-text text-darken-2 col s12 sup-caption" id="category">IT/ Web-development</span>
+                        <span className="item-preview-caption flow-text grey-text text-darken-4 col s12 m6">Front-end developer</span>
+                        <span className="item-preview-location flow-text grey-text text-darken-1 col s6 m3 center-align">Varosh, Ukraine</span>
+                        <span className="item-preview-date flow-text grey-text text-darken-1 col s6 m3 center-align">16 hours ago</span>
+                        <span className="item-preview-category flow-text grey-text text-darken-2 col s12 sup-caption">IT/ Web-development</span>
                     </div>
                     <div className="row">
-                        <p className="flow-text grey-text text-darken-1 col s12" id="description">asdf asdlfiwe welirho hslajdf vkdb werbb erwkejksd skdjfew wekr msdf asdf asdlfiwe welirho hslajdf vkdb werbb</p>
+                        <p className="item-preview-description flow-text grey-text text-darken-3 left-align col s12">asdf asdlfiwe welirho hslajdf vkdb werbb erwkejksd skdjfew wekr msdf asdf asdlfiwe welirho hslajdf vkdb werbb</p>
                     </div>
                 </div>
             );
@@ -114,7 +117,7 @@ export class Item extends React.Component {
     }
 
     render() {
-        console.log(this.state.active);
+        console.log(this.state.popOutActive)
         return this.itemRender()
     }
 }

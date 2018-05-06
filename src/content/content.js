@@ -8,9 +8,6 @@ export class Content extends React.Component {
                 <Item/>
                 <Item/>
                 <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
             </div>
         )
     }
