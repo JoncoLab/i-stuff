@@ -1,49 +1,49 @@
-[debug] [2018-05-06T14:21:34.425Z] ----------------------------------------------------------------------
-[debug] [2018-05-06T14:21:34.428Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Saladin\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-05-06T14:21:34.428Z] CLI Version:   3.18.4
-[debug] [2018-05-06T14:21:34.428Z] Platform:      win32
-[debug] [2018-05-06T14:21:34.428Z] Node Version:  v9.3.0
-[debug] [2018-05-06T14:21:34.429Z] Time:          Sun May 06 2018 17:21:34 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-06T14:21:34.429Z] ----------------------------------------------------------------------
+[debug] [2018-05-09T05:20:08.518Z] ----------------------------------------------------------------------
+[debug] [2018-05-09T05:20:08.520Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Saladin\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-09T05:20:08.521Z] CLI Version:   3.18.4
+[debug] [2018-05-09T05:20:08.521Z] Platform:      win32
+[debug] [2018-05-09T05:20:08.521Z] Node Version:  v9.3.0
+[debug] [2018-05-09T05:20:08.521Z] Time:          Wed May 09 2018 08:20:08 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-09T05:20:08.521Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-05-06T14:21:34.466Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-05-06T14:21:34.468Z] > authorizing via signed-in user
-[debug] [2018-05-06T14:21:34.469Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-05-06T14:21:34.470Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2018-05-09T05:20:08.542Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-09T05:20:08.543Z] > authorizing via signed-in user
+[debug] [2018-05-09T05:20:08.546Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-09T05:20:08.546Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  { refresh_token: '1/0MpmmW3OB4atRAvGR8w0T5Uhle-SwJ8oM5gt6Bmiju_M_Gld_WOqN9JzuCGW_-BB',
   client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
   client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
   grant_type: 'refresh_token',
   scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Sun May 06 2018 17:21:34 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-06T14:21:36.745Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-06T14:21:36.794Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/i-staff  
+ Wed May 09 2018 08:20:08 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-09T05:20:08.820Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T05:20:08.855Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/i-staff  
   
- Sun May 06 2018 17:21:36 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-06T14:21:39.240Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-06T14:21:39.241Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/i-staff/tokens  
+ Wed May 09 2018 08:20:08 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-09T05:20:09.743Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T05:20:09.743Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/i-staff/tokens  
   
- Sun May 06 2018 17:21:39 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-06T14:21:40.506Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-06T14:21:40.509Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/i-staff  
+ Wed May 09 2018 08:20:09 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-09T05:20:10.466Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T05:20:10.467Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/i-staff  
   
- Sun May 06 2018 17:21:40 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-06T14:21:42.192Z] <<< HTTP RESPONSE 200
+ Wed May 09 2018 08:20:10 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-09T05:20:11.454Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'C:\OSPanel\domains\i-stuff'...
 [info] 
 [info] i  functions: Preparing to emulate functions.
-[debug] [2018-05-06T14:21:52.252Z] Fetching environment
-[debug] [2018-05-06T14:21:52.266Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/141915387124:getServerAppConfig  
+[debug] [2018-05-09T05:20:24.769Z] Fetching environment
+[debug] [2018-05-09T05:20:24.794Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/141915387124:getServerAppConfig  
   
- Sun May 06 2018 17:21:52 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-06T14:21:52.267Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/141915387124/clients/_:getWebAppConfig  
+ Wed May 09 2018 08:20:24 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-09T05:20:24.794Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/141915387124/clients/_:getWebAppConfig  
   
- Sun May 06 2018 17:21:52 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-06T14:21:54.254Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-06T14:21:54.385Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-06T14:21:54.385Z] Starting @google-cloud/functions-emulator
+ Wed May 09 2018 08:20:24 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-09T05:20:25.552Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T05:20:25.553Z] Starting @google-cloud/functions-emulator
+[debug] [2018-05-09T05:20:25.623Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: build
 [info] +  hosting: Local server: http://localhost:5000
 
-[debug] [2018-05-06T14:22:01.764Z] Parsing function triggers
+[debug] [2018-05-09T05:20:33.554Z] Parsing function triggers

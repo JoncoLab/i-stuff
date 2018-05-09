@@ -33,7 +33,7 @@ export class Item extends React.Component {
     }
     itemRender() {
         let content;
-        if(this.state.itemActive === true) {
+        if (this.state.itemActive === true) {
             content = (
                 <div className="item grey lighten-5 z-depth-2">
                     <div className="row">
@@ -75,7 +75,7 @@ export class Item extends React.Component {
                         </div>
                         <div className="col s12 m3 apply">
                             <div className="row">
-                                <span className="flow-text grey-text text-darken-1 col s12 left-align" id="apply-date">16 hours ago</span>
+                                <span className="flow-text grey-text text-darken-1 col s12 left-align" id="apply-date">{this.state.vacancyData.date}</span>
                                 <span className="flow-text grey-text text-darken-3 col s12" id="apply-caption">Front-end developer</span>
                                 <span className="flow-text grey-text text-darken-2 col s12 sup-caption" id="apply-category">IT/ Web-development</span>
                                 <span className="flow-text grey-text text-darken-1 col s12 left-align" id="apply-location">Varosh, Ukraine</span>
@@ -99,7 +99,7 @@ export class Item extends React.Component {
                     </div>
                 </div>
             );
-        } else if(this.state.itemActive === false) {
+        } else if (this.state.itemActive === false) {
             content = (
                 <div  className="item-preview content grey lighten-5 z-depth-2" onClick={this.itemEvent} style={{display: this.state.hideItems}}>
                     <div className="row">
@@ -118,11 +118,6 @@ export class Item extends React.Component {
     }
 
     render() {
-        console.log(this.state.vacancyData.name)
-        console.log(this.state.vacancyData.category)
-        console.log(this.state.vacancyData.location)
-        console.log(this.state.vacancyData.date)
-        console.log(this.state.vacancyData.description)
         return this.itemRender()
     }
 }

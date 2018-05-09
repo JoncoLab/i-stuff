@@ -26,6 +26,31 @@ p {
   width: 100%;
 }
 
+.sidenav .input-field {
+  display: block;
+  margin: 30px 0 0;
+}
+
+.sidenav .input-field .dropdown-trigger {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.sidenav .input-field label {
+  top: unset;
+  left: 10px;
+  bottom: 100%;
+}
+
+.sidenav .input-field .dropdown-trigger,
+.sidenav .input-field .dropdown-content span {
+  color: #444444;
+}
+
+.sidenav .input-field .dropdown-trigger {
+  border-bottom-color: #444444;
+}
+
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
