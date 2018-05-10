@@ -103,20 +103,29 @@ body .introduction-top h2:first-of-type {
 body .introduction-top h2:last-of-type {
     font-family: "Open-Sans", sans-serif;
 }
+body .parallax-container nav {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+body .parallax-container nav .nav-wrapper ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+body .parallax-container nav .nav-wrapper ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+body .parallax-container nav .nav-wrapper ul li a {
+    font-family: "Open-Sans", sans-serif;
+    letter-spacing: 1.1px;
+}
 body .parallax-container {
     height: 86vh;
     padding-bottom: 0;
     margin-bottom: 0;
-}
-body .parallax-container nav {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-body .parallax-container nav ul li:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-body .parallax-container nav ul li a {
-    font-family: "Open-Sans", sans-serif;
-    letter-spacing: 1.1px;
 }
 body .parallax-container .container .row h2:first-of-type {
     letter-spacing: 1.4px;
@@ -145,23 +154,27 @@ body .parallax::before {
     z-index: 1;
     background: rgba(0, 0, 0, 0.6);
 }
-body .container .row .caption, body .parallax-container .container .row .caption {
+body .container .row .caption, body .parallax-container .container .row .caption, body .container .caption {
     font-family: "Open-Sans", sans-serif;
     letter-spacing: 1.2px;
+    width: 100%;
+    text-align: center;
+}
+body #about-us .row i {
+    font-size: 4em;
 }
 body #about-us .row h5 {
     font-size: 1.3em;
     font-family: "Lato", sans-serif;
+    font-weight: normal;
 }
 body #about-us .row h6 {
     font-size: 1.3em;
     font-family: "Lato", sans-serif;
-}
-body #our-partners {
-    height: 35vh;
+    font-weight: normal;
 }
 body #our-employers .section .carousel {
-    height: 300px;
+    height: 350px;
 }
 body #our-employers .section .carousel .person {
     min-height: 200px;
@@ -195,39 +208,37 @@ body #contact-us .container .row h4 {
 }
 body #contact-us .container .row ul li h5 {
     padding-left: 20px;
-    font-size: 1.4em;
+    font-size: 0.9em;
     font-family: "Open-Sans", sans-serif;
 }
 body #contact-us .container .row ul li h6 {
-    font-size: 1.1em;
+    font-size: 0.7em;
     padding-left: 40px;
 }
 body #contact-us .container .row form {
     padding: 20px 30px;
 }
-body #contact-us .container .row form input:not(#submit) {
+body #contact-us .container .row form input {
     font-family: "OpenSans", sans-serif;
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: normal;
     letter-spacing: 1.1px;
     color: white;
     padding: 1px 5px;
     border: 1px solid white;
-}
-body #contact-us .container .row form input:not(#submit) {
-
+    margin: 3px 0;
 }
 body #contact-us .container .row form input:not(#submit)::placeholder {
     color: white;
 }
 body #contact-us .container .row form #submit {
     width: 105%;
-    padding: 10px 5px;
+    padding: 5px;
     background: transparent;
     color: white;
     outline: none;
     border: 1px solid white;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-family: "Open-Sans", sans-serif;
     cursor: pointer;
     transition-duration: 0.2s;
@@ -236,4 +247,26 @@ body #contact-us .container .row form #submit {
 body #contact-us .container .row form #submit:hover {
     background: white;
     color: black;
+}
+@media screen and (max-width: 470px) {
+    body .introduction-top h2 {
+        padding: 0;
+        margin: 10px 0 0;
+    }
+    body .parallax-container {
+        height: auto;
+    }
+    body .parallax-container nav .nav-wrapper ul li a {
+        padding: 0 5px;
+        margin: 0;
+        font-size: 0.85em;
+        white-space: nowrap;
+    }
+    body #contact-us {
+        min-height: 100vh;
+        height: auto;
+    }
+    body #contact-us *:not(.caption) {
+        font-size: 1.2em;
+    }
 }
