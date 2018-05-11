@@ -20,7 +20,7 @@ class App extends React.Component {
         };
 
         this.changeFilters = this.changeFilters.bind(this);
-        this.bindPositions = this.bindPositions.bind(this)
+        this.bindPositions = this.bindPositions.bind(this);
     }
     componentWillMount() {
         this.bindPositions()

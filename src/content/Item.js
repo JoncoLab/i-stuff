@@ -13,13 +13,17 @@ export class Item extends React.Component {
                 category: this.props.category,
                 location: this.props.location,
                 date: this.props.date,
-                description: this.props.description
+                description: this.props.description,
+                responsibilities: this.props.responsibilities,
+                requirements: this.props.requirements,
+                niceToHave: this.props.niceToHave
             }
         };
 
         this.itemEvent = this.itemEvent.bind(this);
         this.popOurEvent = this.popOurEvent.bind(this);
         this.itemRender = this.itemRender.bind(this);
+        this.captionRender = this.captionRender.bind(this);
     }
     itemEvent() {
         this.setState({
@@ -30,6 +34,15 @@ export class Item extends React.Component {
         this.setState({
             popOutActive: !this.state.popOutActive
         });
+    }
+    captionRender(caption) {
+        let content;
+        if(this.state.vacancyData.responsibilities.length <= 0) {
+            content = "";
+        } else {
+            content = caption;
+        }
+        return content;
     }
     itemRender() {
         let content;
@@ -48,28 +61,33 @@ export class Item extends React.Component {
                             </div>
                             <p className="item-description flow-text grey-text text-darken-3 left-align">{this.state.vacancyData.description}</p>
                             <div className="responsibilities">
-                                <h4 className="flow-text grey-text text-darken-3 left-align">Responsibilities:</h4>
-                                <ul className="flow-text grey-text text-darken-3">
-                                    <li>Manage backup services for Data Center and Remote (WAN attached) Servers</li>
-                                    <li>Proactively manage server performance.</li>
-                                    <li>Proactively manage storage performance.</li>
-                                    <li>Troubleshoot HW and Server applications</li>
+                                <h4 className="flow-text grey-text text-darken-3 left-align">{this.captionRender("Responsibilities:")}</h4>
+                                <ul className="flow-text grey-text text-darken-3 left-align">
+                                    {
+                                        this.state.vacancyData.responsibilities.map((item, i) => (
+                                            <li key={i}>{item}</li>
+                                        ))
+                                    }
                                 </ul>
                             </div>
                             <div className="requirements">
-                                <h4 className="flow-text grey-text text-darken-3 left-align">Requirements:</h4>
-                                <ul>
-                                    <li>Cisco UCS Experience</li>
-                                    <li>Cisco networking Experience</li>
-                                    <li>Citrix Experience</li>
-                                    <li>Anti-Virus Management</li>
+                                <h4 className="flow-text grey-text text-darken-3 left-align">{this.captionRender("Requirements:")}</h4>
+                                <ul className="flow-text grey-text text-darken-3 left-align">
+                                    {
+                                        this.state.vacancyData.requirements.map((item, i) => (
+                                            <li key={i}>{item}</li>
+                                        ))
+                                    }
                                 </ul>
                             </div>
                             <div className="nice-to-have">
-                                <h4 className="flow-text grey-text text-darken-3 left-align">Nice to have:</h4>
-                                <ul>
-                                    <li>SharePoint Server administration</li>
-                                    <li>Office 365 Migration and Management experience</li>
+                                <h4 className="flow-text grey-text text-darken-3 left-align">{this.captionRender("Nice to have:")}</h4>
+                                <ul className="flow-text grey-text text-darken-3 left-align">
+                                    {
+                                        this.state.vacancyData.requirements.map((item, i) => (
+                                            <li key={i}>{item}</li>
+                                        ))
+                                    }
                                 </ul>
                             </div>
                         </div>
@@ -118,6 +136,7 @@ export class Item extends React.Component {
     }
 
     render() {
+        console.log(this.state.vacancyData.responsibilities.length);
         return this.itemRender()
     }
 }

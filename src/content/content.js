@@ -19,6 +19,9 @@ export class Content extends React.Component {
                             location={item.location}
                             date={item.date.toDate().toDateString()}
                             description={item.description}
+                            responsibilities={item.responsibilities}
+                            requirements={item.requirements}
+                            niceToHave={item.niceToHave}
                         />
                     ))
                 }
