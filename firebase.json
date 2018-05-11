@@ -20,7 +20,7 @@
       }
     ],
     "cleanUrls": false,
-    "trailingSlash": true
+    "trailingSlash": false
   },
   "storage": {
     "rules": "storage.rules"
