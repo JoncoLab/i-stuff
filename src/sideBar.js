@@ -59,11 +59,7 @@ export class SideBar extends React.Component {
                     </li>
                     <li><div className="divider hide-on-med-and-up"> </div></li>
                     <li><a className="subheader hide-on-med-and-up">Back to</a></li>
-                    <li className="hide-on-med-and-up"><a className="waves-effect" href="#">Main</a></li>
-                    <li className="hide-on-med-and-up"><a className="waves-effect" href="#">About Us</a></li>
-                    <li className="hide-on-med-and-up"><a className="waves-effect" href="#">Our Partners</a></li>
-                    <li className="hide-on-med-and-up"><a className="waves-effect" href="#">Our Employees</a></li>
-                    <li className="hide-on-med-and-up"><a className="waves-effect" href="#">Contact Us</a></li>
+                    <li className="hide-on-med-and-up"><a className="waves-effect" href="./landing.html">Back to Main</a></li>
                 </ul>
             </Fragment>
         )

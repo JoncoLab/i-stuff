@@ -300,6 +300,7 @@ body {
 }
 #root .App .content .item .apply .popout-enabled .popout-content button {
     padding: 15px 0;
+    margin-bottom: 0;
     font-size: 1.1em;
     font-family: "Lato", sans-serif;
     letter-spacing: .9px;
@@ -318,12 +319,14 @@ body {
     background-color: #6fc573 !important;
 }
 #root .App .content .item .apply .back-link {
-    outline: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
     font-size: 1.4em;
     font-family: "Open-Sans", sans-serif;
     letter-spacing: 0.8px;
     background: transparent;
-    text-align: right;
     border: 1px solid #424242;
     border-radius: 4px;
     width: 100%;
@@ -334,8 +337,7 @@ body {
 }
 #root .App .content .item .apply .back-link i {
     font-size: 1.4em;
-    padding: 0 5px 0 20px;
-    margin-left: 10px;
+    margin-right: 5px;
 }
 #root .App .content .item .apply .back-link:hover {
     color: #2d2d2d;
@@ -352,6 +354,13 @@ body {
         min-height: auto;
         height: auto;
         width: 150%;
+    }
+    #root .App .content .item .row .description {
+        border-right: none;
+        border-bottom: 1px solid #c2c2c2;
+    }
+    #root .App .content .item .apply .popout-enabled .popout-content {
+        width: 85%;
     }
 }
 body::-webkit-scrollbar {

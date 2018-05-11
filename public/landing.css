@@ -249,6 +249,15 @@ body #contact-us .container .row form #submit:hover {
     color: black;
 }
 @media screen and (max-width: 470px) {
+    /*body .parallax-container nav {*/
+        /*position: fixed;*/
+        /*top: 0;*/
+        /*left: 0;*/
+        /*margin: 0;*/
+        /*height: 100vh;*/
+        /*width: 70%;*/
+        /*background: white;*/
+    /*}*/
     body .introduction-top h2 {
         padding: 0;
         margin: 10px 0 0;

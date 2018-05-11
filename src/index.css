@@ -25,7 +25,14 @@ p {
 .parallax-container .section {
   width: 100%;
 }
-
+.App header nav .logo {
+  font-family: "Lato", sans-serif;
+}
+.App header nav .logo .slogan {
+  letter-spacing: 1.2px;
+  font-family: "Open-Sans", sans-serif;
+  padding-left: 15px;
+}
 .sidenav .input-field {
   display: block;
   margin: 30px 0 0;

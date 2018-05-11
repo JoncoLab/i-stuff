@@ -76,9 +76,9 @@ export class Item extends React.Component {
                         <div className="col s12 m3 apply">
                             <div className="row">
                                 <span className="flow-text grey-text text-darken-1 col s12 left-align" id="apply-date">{this.state.vacancyData.date}</span>
-                                <span className="flow-text grey-text text-darken-3 col s12" id="apply-caption">Front-end developer</span>
-                                <span className="flow-text grey-text text-darken-2 col s12 sup-caption" id="apply-category">IT/ Web-development</span>
-                                <span className="flow-text grey-text text-darken-1 col s12 left-align" id="apply-location">Varosh, Ukraine</span>
+                                <span className="flow-text grey-text text-darken-3 col s12" id="apply-caption">{this.state.vacancyData.name}</span>
+                                <span className="flow-text grey-text text-darken-2 col s12 sup-caption" id="apply-category">{this.state.vacancyData.category}</span>
+                                <span className="flow-text grey-text text-darken-1 col s12 left-align" id="apply-location">{this.state.vacancyData.location}</span>
                             </div>
                             <button className="btn col s12 btn-large green lighten-1" onClick={this.popOurEvent}>Apply</button>
                             <div className={this.state.popOutActive ? "popout-enabled row" : "popout-disabled"}>
@@ -94,7 +94,7 @@ export class Item extends React.Component {
                                     <button className="white-text green lighten-1" type="submit" id="submit">Send</button>
                                 </form>
                             </div>
-                            <button className="valign-wrapper back-link flow-text grey-text text-darken-3" onClick={this.itemEvent}><i className="material-icons">arrow_back</i> Back to all vacancies</button>
+                            <button className="valign-wrapper back-link flow-text grey-text text-darken-3" onClick={this.itemEvent}><i className="material-icons">arrow_back</i>Close</button>
                         </div>
                     </div>
                 </div>
