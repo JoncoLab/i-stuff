@@ -1,49 +1,73 @@
-[debug] [2018-05-09T05:20:08.518Z] ----------------------------------------------------------------------
-[debug] [2018-05-09T05:20:08.520Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Saladin\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-05-09T05:20:08.521Z] CLI Version:   3.18.4
-[debug] [2018-05-09T05:20:08.521Z] Platform:      win32
-[debug] [2018-05-09T05:20:08.521Z] Node Version:  v9.3.0
-[debug] [2018-05-09T05:20:08.521Z] Time:          Wed May 09 2018 08:20:08 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-09T05:20:08.521Z] ----------------------------------------------------------------------
+[debug] [2018-05-11T11:11:44.412Z] ----------------------------------------------------------------------
+[debug] [2018-05-11T11:11:44.415Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Sher\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-05-11T11:11:44.415Z] CLI Version:   3.18.4
+[debug] [2018-05-11T11:11:44.415Z] Platform:      win32
+[debug] [2018-05-11T11:11:44.415Z] Node Version:  v8.1.2
+[debug] [2018-05-11T11:11:44.415Z] Time:          Fri May 11 2018 14:11:44 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-11T11:11:44.415Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-05-09T05:20:08.542Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-05-09T05:20:08.543Z] > authorizing via signed-in user
-[debug] [2018-05-09T05:20:08.546Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-05-09T05:20:08.546Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/0MpmmW3OB4atRAvGR8w0T5Uhle-SwJ8oM5gt6Bmiju_M_Gld_WOqN9JzuCGW_-BB',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Wed May 09 2018 08:20:08 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-09T05:20:08.820Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-09T05:20:08.855Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/i-staff  
+[debug] [2018-05-11T11:11:44.430Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-11T11:11:44.431Z] > authorizing via signed-in user
+[debug] [2018-05-11T11:11:44.433Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/i-staff  
   
- Wed May 09 2018 08:20:08 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-09T05:20:09.743Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-09T05:20:09.743Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/i-staff/tokens  
+ Fri May 11 2018 14:11:44 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-11T11:11:46.076Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-11T11:11:46.079Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/i-staff/tokens  
   
- Wed May 09 2018 08:20:09 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-09T05:20:10.466Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-09T05:20:10.467Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/i-staff  
-  
- Wed May 09 2018 08:20:10 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-09T05:20:11.454Z] <<< HTTP RESPONSE 200
+ Fri May 11 2018 14:11:46 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-11T11:11:46.969Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from 'C:\OSPanel\domains\i-stuff'...
+[info] === Deploying to 'i-staff'...
 [info] 
-[info] i  functions: Preparing to emulate functions.
-[debug] [2018-05-09T05:20:24.769Z] Fetching environment
-[debug] [2018-05-09T05:20:24.794Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/141915387124:getServerAppConfig  
+[info] i  deploying database, storage, firestore, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-05-11T11:11:48.556Z] >>> HTTP REQUEST PUT https://i-staff.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+ 
+ Fri May 11 2018 14:11:48 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-11T11:11:49.944Z] <<< HTTP RESPONSE 200
+[info] +  database: rules syntax for database i-staff is valid
+[debug] [2018-05-11T11:11:49.950Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/i-staff  
   
- Wed May 09 2018 08:20:24 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-09T05:20:24.794Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/141915387124/clients/_:getWebAppConfig  
+ Fri May 11 2018 14:11:49 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-11T11:11:51.665Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-05-11T11:11:51.677Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/i-staff:test  
+ { source: { files: [ [Object] ] } } 
+ Fri May 11 2018 14:11:51 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-11T11:11:53.439Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-05-11T11:11:53.458Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/i-staff:test  
+ { source: { files: [ [Object] ] } } 
+ Fri May 11 2018 14:11:53 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-11T11:11:55.040Z] <<< HTTP RESPONSE 200
+[info] +  firestore: rules file firestore.rules compiled successfully
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-05-11T11:11:55.053Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/i-staff/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Fri May 11 2018 14:11:55 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-11T11:11:56.720Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-11T11:11:56.721Z] [rules] created ruleset projects/i-staff/rulesets/f4e36401-d26c-4c92-8555-a4aa688f5077
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-05-11T11:11:56.726Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/i-staff/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Fri May 11 2018 14:11:56 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-11T11:11:56.728Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/i-staff/databases/(default)/indexes  
   
- Wed May 09 2018 08:20:24 GMT+0300 (Финляндия (лето))
-[debug] [2018-05-09T05:20:25.552Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-09T05:20:25.553Z] Starting @google-cloud/functions-emulator
-[debug] [2018-05-09T05:20:25.623Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: build
-[info] +  hosting: Local server: http://localhost:5000
-
-[debug] [2018-05-09T05:20:33.554Z] Parsing function triggers
+ Fri May 11 2018 14:11:56 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-11T11:11:58.440Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-11T11:11:58.441Z] [rules] created ruleset projects/i-staff/rulesets/c8e75f21-18b2-4b6d-b2fa-533e9c111fee
+[debug] [2018-05-11T11:11:58.465Z] <<< HTTP RESPONSE 200
+[info] i  hosting: preparing build directory for upload...
+[debug] [2018-05-11T11:11:59.963Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/i-staff/uploads/-LCDtb70RaXWKZOmCe6M?fileCount=71&message=  
+  
+ Fri May 11 2018 14:11:59 GMT+0300 (Финляндия (лето))
+[debug] [2018-05-11T11:13:27.144Z] Error: write ECONNRESET
+    at exports._errnoException (util.js:1016:11)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:850:14)

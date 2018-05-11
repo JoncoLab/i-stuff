@@ -12,7 +12,15 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/landing.html"
+      }
+    ],
+    "cleanUrls": false,
+    "trailingSlash": true
   },
   "storage": {
     "rules": "storage.rules"
