@@ -1,0 +1,271 @@
+@font-face {
+    font-family: "Lato";
+    src: url("./fonts/Lato/Lato-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Lato-Bold";
+    src: url("./fonts/Lato/Lato-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url("./fonts/Lato/Lato-Light.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Open-Sans";
+    src: url("./fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Open-Sans-Bold";
+    src: url("./fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Open-Sans-Black";
+    src: url("./fonts/Open_Sans/OpenSans-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Open-Sans-Light";
+    src: url("./fonts/Open_Sans/OpenSans-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/roboto/Roboto-Regular.woff") format("woff"), url("./fonts/roboto/Roboto-Regular.woff2") format("woff2");
+    font-style: normal; }
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url("./fonts/roboto/Roboto-Medium.woff") format("woff"), url("./fonts/roboto/Roboto-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("./fonts/roboto/Roboto-Bold.woff") format("woff"), url("./fonts/roboto/Roboto-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url("./fonts/roboto/Roboto-Thin.woff") format("woff"), url("./fonts/roboto/Roboto-Thin.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("./fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Ubuntu-Medium";
+    src: url("./fonts/Ubuntu/Ubuntu-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Ubuntu-Bold";
+    src: url("./fonts/Ubuntu/Ubuntu-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal; }
+
+@font-face {
+    font-family: "Ico";
+    src: url("./fonts/icons/icons.woff") format("woff"), url("./fonts/icons/icons.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal; }
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body .introduction-top h2 {
+    font-size: 2em;
+}
+body .introduction-top h2:first-of-type {
+    font-family: "Lato", sans-serif;
+    letter-spacing: 1.4px;
+}
+body .introduction-top h2:last-of-type {
+    font-family: "Open-Sans", sans-serif;
+}
+body .parallax-container nav {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+body .parallax-container nav .nav-wrapper ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+body .parallax-container nav .nav-wrapper ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+body .parallax-container nav .nav-wrapper ul li a {
+    font-family: "Open-Sans", sans-serif;
+    letter-spacing: 1.1px;
+}
+body .parallax-container {
+    height: 86vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+body .parallax-container .container .row h2:first-of-type {
+    letter-spacing: 1.4px;
+    line-height: 1.2;
+    font-size: 3em;
+    font-family: "Open-Sans-Light", sans-serif;
+    text-transform: uppercase;
+    margin: 15vh 0 10vh 0;
+}
+body .parallax-container .container .row h2:last-of-type {
+    font-size: 2.4em;
+    letter-spacing: 1.6px;
+    margin: 0;
+}
+body .parallax img {
+    position: relative;
+}
+body .parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+}
+body .container .row .caption, body .parallax-container .container .row .caption, body .container .caption {
+    font-family: "Open-Sans", sans-serif;
+    letter-spacing: 1.2px;
+    width: 100%;
+    text-align: center;
+}
+body #about-us .row i {
+    font-size: 4em;
+}
+body #about-us .row h5 {
+    font-size: 1.3em;
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+}
+body #about-us .row h6 {
+    font-size: 1.3em;
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+}
+body #our-employers .section .carousel {
+    height: 350px;
+}
+body #our-employers .section .carousel .person {
+    min-height: 200px;
+}
+body #our-employers .section .carousel .person img {
+    min-width: 100%;
+    min-height: 65%;
+}
+body #our-employers .section .carousel .person .name {
+    width: 100%;
+    font-size: 1.2em;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    padding: 0;
+    margin: 0;
+}
+body #our-employers .section .carousel .person .position {
+    width: 100%;
+    font-size: 1.1em;
+    font-family: "Open-Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body #contact-us {
+    height: 75vh;
+}
+body #contact-us .container .row h4 {
+    padding-left: 10px;
+}
+body #contact-us .container .row ul li h5 {
+    padding-left: 20px;
+    font-size: 0.9em;
+    font-family: "Open-Sans", sans-serif;
+}
+body #contact-us .container .row ul li h6 {
+    font-size: 0.7em;
+    padding-left: 40px;
+}
+body #contact-us .container .row form {
+    padding: 20px 30px;
+}
+body #contact-us .container .row form input {
+    font-family: "OpenSans", sans-serif;
+    font-size: 0.9em;
+    font-weight: normal;
+    letter-spacing: 1.1px;
+    color: white;
+    padding: 1px 5px;
+    border: 1px solid white;
+    margin: 3px 0;
+}
+body #contact-us .container .row form input:not(#submit)::placeholder {
+    color: white;
+}
+body #contact-us .container .row form #submit {
+    width: 105%;
+    padding: 5px;
+    background: transparent;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    font-size: 0.9em;
+    font-family: "Open-Sans", sans-serif;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+body #contact-us .container .row form #submit:hover {
+    background: white;
+    color: black;
+}
+@media screen and (max-width: 470px) {
+    body .introduction-top h2 {
+        padding: 0;
+        margin: 10px 0 0;
+    }
+    body .parallax-container {
+        height: auto;
+    }
+    body .parallax-container nav .nav-wrapper ul li a {
+        padding: 0 5px;
+        margin: 0;
+        font-size: 0.85em;
+        white-space: nowrap;
+    }
+    body #contact-us {
+        min-height: 100vh;
+        height: auto;
+    }
+    body #contact-us *:not(.caption) {
+        font-size: 1.2em;
+    }
+}

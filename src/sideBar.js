@@ -1,6 +1,7 @@
 import React, {Fragment} from "react"
 import Header from "./header"
 import PropTypes from "prop-types"
+import {Link} from "react-router-dom"
 import * as $ from "jquery";
 import * as M from "materialize-css";
 
@@ -59,7 +60,7 @@ export class SideBar extends React.Component {
                     </li>
                     <li><div className="divider hide-on-med-and-up"> </div></li>
                     <li><a className="subheader hide-on-med-and-up">Back to</a></li>
-                    <li className="hide-on-med-and-up"><a className="waves-effect" href="./landing.html">Back to Main</a></li>
+                    <li className="hide-on-med-and-up"><Link className="waves-effect" to={"/landing"}>Back to Main</Link></li>
                 </ul>
             </Fragment>
         )
