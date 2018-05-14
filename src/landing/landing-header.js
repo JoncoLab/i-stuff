@@ -14,7 +14,7 @@ export class LandingHeader extends React.Component {
                         <span className="flow-text light col s2 center-align white-text hide-on-med-and-up">iStaff</span>
                         <span className="flow-text light col s6 center-align white-text hide-on-med-and-up">MADE SIMPLE</span>
                         <ul className="hide-on-med-and-down">
-                            <li><Link to={"/vacancies"}>Vacancies</Link></li>
+                            <li><Link className="white-text" to={"/vacancies"}>Vacancies</Link></li>
                             <li><a className="white-text" href="#main">Main</a></li>
                             <li><a className="white-text" href="#about-us">About Us</a></li>
                             <li><a className="white-text" href="#our-employers">Our Employees</a></li>
@@ -23,7 +23,6 @@ export class LandingHeader extends React.Component {
                     </div>
                 </nav>
                 <ul id="slide-out" className="sidenav">
-                    <li><div className="divider hide-on-med-and-up"> </div></li>
                     <li><Link to={"/vacancies"}>Vacancies</Link></li>
                     <li><div className="divider hide-on-med-and-up"> </div></li>
                     <li><a className="black-text" href="#main">Main</a></li>
