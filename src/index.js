@@ -34,8 +34,8 @@ class AppDeploy extends React.Component {
         return (
             <Fragment>
                 <Switch>
-                    <Route exact path="/vacancies" component={AppRender}/>
-                    <Route exact path="/landing" component={Landing}/>
+                    <Route path="/vacancies" component={AppRender}/>
+                    <Route exact path="/" component={Landing}/>
                 </Switch>
             </Fragment>
         )

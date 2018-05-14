@@ -31,7 +31,6 @@ export class SideBar extends React.Component {
                             <div className="background">
                                 <img className="responsive-img" src="img/workflow.jpg"/>
                             </div>
-                            <a href="#user"><img className="circle" src="images/yuna.jpg"/></a>
                             <a href="#name"><span className="white-text name">Search tools</span></a>
                             <a href="#email"><span className="white-text email">Discover available positions</span></a>
                         </div>
@@ -60,7 +59,7 @@ export class SideBar extends React.Component {
                     </li>
                     <li><div className="divider hide-on-med-and-up"> </div></li>
                     <li><a className="subheader hide-on-med-and-up">Back to</a></li>
-                    <li className="hide-on-med-and-up"><Link className="waves-effect" to={"/landing"}>Back to Main</Link></li>
+                    <li className="hide-on-med-and-up"><Link className="waves-effect" to={"/"}>Back to Main</Link></li>
                 </ul>
             </Fragment>
         )

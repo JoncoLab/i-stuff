@@ -16,10 +16,10 @@
     "rewrites": [
       {
         "source": "/",
-        "destination": "/landing.html"
+        "destination": "/landing"
       }
     ],
-    "cleanUrls": false,
+    "cleanUrls": true,
     "trailingSlash": false
   },
   "storage": {

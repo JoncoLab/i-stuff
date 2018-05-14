@@ -122,6 +122,9 @@ body .parallax-container nav .nav-wrapper ul li a {
     font-family: "Open-Sans", sans-serif;
     letter-spacing: 1.1px;
 }
+body .parallax-container nav .nav-wrapper ul li a:visited {
+    color: white !important;
+}
 body .parallax-container {
     height: 86vh;
     padding-bottom: 0;
