@@ -265,6 +265,9 @@ body #contact-us .container .row form #submit:hover {
     body .parallax-container {
         height: auto;
     }
+    body .parallax-container img {
+        width: 100%;
+    }
     body .parallax-container nav .nav-wrapper ul li a {
         padding: 0 5px;
         margin: 0;
