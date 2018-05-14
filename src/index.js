@@ -4,9 +4,8 @@ import "materialize-css/dist/css/materialize.css"
 import React, {Fragment} from "react"
 import ReactDOM from "react-dom"
 import App from "./App"
-import firebase from "firebase"
 import Rebase from "re-base"
-import "firebase/firestore"
+import firebase from "firebase"
 import * as $ from "jquery"
 import * as M from "materialize-css"
 import {BrowserRouter, Switch, Route} from "react-router-dom"
@@ -22,15 +21,13 @@ const app = firebase.initializeApp({
     messagingSenderId: "141915387124"
 });
 
-const _app = app.firestore();
-_app.settings({timestampsInSnapshots: true});
-const base = Rebase.createClass(_app);
+const base = Rebase.createClass(app.database());
 
 const AppRender = () => (
     <App base={base}/>
 );
 const AdminRender = () => (
-    <Admin base={base}/>
+    <Admin/>
 );
 
 class AppDeploy extends React.Component {

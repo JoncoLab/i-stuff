@@ -1,0 +1,180 @@
+{
+  "positions": {
+    "pos-1" : {
+      "category" : "IT/Web-development",
+      "description" : "Test description...",
+      "name" : "Front-end",
+      "location": "Uzhgorod, Ukraine",
+      "date": "14-05-2018 03:58",
+      "niceToHave" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "requirements" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "responsibilities" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      }
+    },
+    "pos-2" : {
+      "category" : "IT/Web-development",
+      "description" : "Test description...",
+      "name" : "Front-end",
+      "location": "Uzhgorod, Ukraine",
+      "date": "14-05-2018 03:58",
+      "niceToHave" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "requirements" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "responsibilities" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      }
+    },
+    "pos-3" : {
+      "category" : "IT/Web-development",
+      "description" : "Test description...",
+      "name" : "Front-end",
+      "location": "Uzhgorod, Ukraine",
+      "date": "14-05-2018 03:58",
+      "niceToHave" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "requirements" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "responsibilities" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      }
+    },
+    "pos-4" : {
+      "category" : "IT/Web-development",
+      "description" : "Test description...",
+      "name" : "Front-end",
+      "location": "Uzhgorod, Ukraine",
+      "date": "14-05-2018 03:58",
+      "niceToHave" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "requirements" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "responsibilities" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      }
+    },
+    "pos-5" : {
+      "category" : "IT/Web-development",
+      "description" : "Test description...",
+      "name" : "Front-end",
+      "location": "Uzhgorod, Ukraine",
+      "date": "14-05-2018 03:58",
+      "niceToHave" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "requirements" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "responsibilities" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      }
+    },
+    "pos-6" : {
+      "category" : "IT/Web-development",
+      "description" : "Test description...",
+      "name" : "Front-end",
+      "location": "Uzhgorod, Ukraine",
+      "date": "14-05-2018 03:58",
+      "niceToHave" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "requirements" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "responsibilities" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      }
+    },
+    "pos-7" : {
+      "category" : "IT/Web-development",
+      "description" : "Test description...",
+      "name" : "Front-end",
+      "location": "Uzhgorod, Ukraine",
+      "date": "14-05-2018 03:58",
+      "niceToHave" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "requirements" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "responsibilities" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      }
+    },
+    "pos-8" : {
+      "category" : "IT/Web-development",
+      "description" : "Test description...",
+      "name" : "Front-end",
+      "location": "Uzhgorod, Ukraine",
+      "date": "14-05-2018 03:58",
+      "niceToHave" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "requirements" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      },
+      "responsibilities" : {
+        "nth-1" : "First item",
+        "nth-2" : "Second item",
+        "nth-3" : "Third item"
+      }
+    }
+  }
+}

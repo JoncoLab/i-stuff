@@ -17,7 +17,7 @@ export class Content extends React.Component {
                             name={item.name}
                             category={item.category}
                             location={item.location}
-                            date={item.date.toDate().toDateString()}
+                            date={item.date}
                             description={item.description}
                             responsibilities={item.responsibilities}
                             requirements={item.requirements}

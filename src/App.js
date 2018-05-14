@@ -2,7 +2,6 @@ import React from "react"
 import './App.css';
 import {SideBar} from "./api/sideBar"
 import {Content} from "./api/content/content"
-import PropTypes from "prop-types"
 import * as M from "materialize-css"
 
 class App extends React.Component {
@@ -22,44 +21,25 @@ class App extends React.Component {
         this.changeFilters = this.changeFilters.bind(this);
         this.bindPositions = this.bindPositions.bind(this);
     }
-    componentWillMount() {
-        this.bindPositions()
+    componentDidMount() {
+        this.bindPositions();
+        console.log(this.state.positions)
     }
     changeFilters(filters) {
         this.setState({
             filters: filters
         });
         this.bindPositions();
-        console.log(this.state.positions)
     }
     bindPositions() {
-        const makeQuery = (ref) => {
-            if (this.state.filters.catFilter === "default" && this.state.filters.locFilter === "default") {
-                return ref
-            } else if (this.state.filters.catFilter !== "default" && this.state.filters.locFilter !== "default") {
-                return ref.where("category", "==", this.state.filters.catFilter).where("location", "==", this.state.filters.locFilter)
-            } else if (this.state.filters.locFilter === "default") {
-                return ref.where("category", "==", this.state.filters.catFilter)
-            } else if (this.state.filters.catFilter === "default") {
-                return ref.where("location", "==", this.state.filters.locFilter)
-            }
-        };
-
-        this.props.base.bindCollection('positions', {
+        this.props.base.bindToState('positions', {
             context: this,
             state: 'positions',
-            withRefs: true,
-            withIds: true,
-            query: (ref) => makeQuery(ref),
-            then: (data) => {
-                this.setState(state => ({
-                    ...state,
-                    loading: false
-                }));
-
+            asArray: true,
+            then(positions) {
                 let categories = [],
                     locations = [],
-                    p = this.state.positions;
+                    p = positions;
 
                 for (let i in p) {
                     if (p.hasOwnProperty(i)) {
@@ -103,8 +83,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
-
-App.propTypes = {
-    base: PropTypes.object.isRequired
-};
+export default App
