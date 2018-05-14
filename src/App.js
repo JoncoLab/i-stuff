@@ -5,6 +5,7 @@ import {Content} from "./api/content/content"
 import * as M from "materialize-css"
 
 class App extends React.Component {
+    _Bind;
     constructor(props) {
         super(props);
 
@@ -21,18 +22,8 @@ class App extends React.Component {
         this.changeFilters = this.changeFilters.bind(this);
         this.bindPositions = this.bindPositions.bind(this);
     }
-    componentDidMount() {
-        this.bindPositions();
-        console.log(this.state.positions)
-    }
-    changeFilters(filters) {
-        this.setState({
-            filters: filters
-        });
-        this.bindPositions();
-    }
-    bindPositions() {
-        this.props.base.bindToState('positions', {
+    componentWillMount() {
+        this._Bind = this.props.base.bindToState('positions', {
             context: this,
             state: 'positions',
             asArray: true,
@@ -61,6 +52,16 @@ class App extends React.Component {
                 App.Error("Database connection failure!" + "<br>" + err)
             }
         });
+        console.log(this.state.positions)
+    }
+    changeFilters(filters) {
+        this.setState({
+            filters: filters
+        });
+        this.bindPositions();
+    }
+    bindPositions() {
+
     }
     render() {
         return (

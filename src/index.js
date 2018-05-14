@@ -23,6 +23,19 @@ const app = firebase.initializeApp({
 
 const base = Rebase.createClass(app.database());
 
+const MInit = () => {
+    M.Sidenav.init($(".sidenav"));
+    M.Modal.init($(".modal"));
+    M.Parallax.init($(".parallax"));
+    M.Carousel.init($(".carousel"), {
+        fullWidth: false,
+        padding: 100,
+        dist: -20,
+        numVisible: 5,
+        noWrap: false
+    })
+};
+
 const AppRender = () => (
     <App base={base}/>
 );
@@ -31,6 +44,13 @@ const AdminRender = () => (
 );
 
 class AppDeploy extends React.Component {
+    constructor(props) {
+        super(props);
+        this.MInit = MInit;
+    }
+    componentDidUpdate() {
+        this.MInit();
+    }
     render() {
         return (
             <Fragment>
@@ -48,19 +68,7 @@ class AppDeploy extends React.Component {
      <BrowserRouter>
          <AppDeploy/>
      </BrowserRouter>,
-     document.getElementById("root"),
-     () => {
-         M.Modal.init($(".modal"));
-         M.Parallax.init($(".parallax"));
-         M.Sidenav.init($(".sidenav"));
-         M.Carousel.init($(".carousel"), {
-             fullWidth: false,
-             padding: 100,
-             dist: -20,
-             numVisible: 5,
-             noWrap: false
-         });
-     }
+     document.getElementById("root")
  );
 
 registerServiceWorker();
