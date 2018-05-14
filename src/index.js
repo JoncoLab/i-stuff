@@ -40,7 +40,7 @@ const AppRender = () => (
     <App base={base}/>
 );
 const AdminRender = () => (
-    <Admin/>
+    <Admin base={base}/>
 );
 
 class AppDeploy extends React.Component {

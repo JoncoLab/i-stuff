@@ -23,7 +23,7 @@ export class Landing extends React.Component {
                             <h2 className="white-text light flow-text center-align col s12 m8 push-m2">And Start Enjoying the Benefits of Getting Your Jobs Done.</h2>
                         </div>
                     </div>
-                    <div className="parallax"><img width="100" src="../img/main-bg.jpg" alt="Unsplashed background img 1"/></div>
+                    <div className="parallax"><img width="100" src="./img/main-bg.jpg" alt="Unsplashed background img 1"/></div>
                 </div>
 
                 <div className="container" id="about-us">
@@ -100,7 +100,7 @@ export class Landing extends React.Component {
                             <iframe className="col m5 s12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d433.71835608900574!2d22.29954104026481!3d48.62550494767722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473919b68473098d%3A0x650f1ca2da9ac18a!2z0KDRltC-INCf0LvQsNC30LA!5e0!3m2!1suk!2sua!4v1525955001679" height="300" frameBorder={0}/>
                         </div>
                     </div>
-                    <div className="parallax"><img width="100" src="../img/contact-us-bg.jpg" alt="Unsplashed background img 2"/></div>
+                    <div className="parallax"><img width="100" src="./img/contact-us-bg.jpg" alt="Unsplashed background img 2"/></div>
                 </div>
             </Fragment>
         )

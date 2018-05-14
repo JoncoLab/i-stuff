@@ -138,7 +138,6 @@ export class AdminItem extends React.Component {
     }
 
     render() {
-        console.log(this.state.vacancyData.responsibilities.length);
         return this.itemRender()
     }
 }

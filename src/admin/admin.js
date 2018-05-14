@@ -64,7 +64,7 @@ export class Admin extends React.Component {
     }
     render() {
         return (
-            <div className="App grey lighten-3">
+            <div className="admin-panel grey lighten-3">
                 <AdminHeader/>
                 <AdminContent items={this.state.positions}/>
             </div>
