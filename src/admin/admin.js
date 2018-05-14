@@ -1,11 +1,10 @@
 import React from "react"
-import './App.css';
-import {SideBar} from "./api/sideBar"
-import {Content} from "./api/content/content"
-import PropTypes from "prop-types"
+import '../App.css';
 import * as M from "materialize-css"
+import {AdminHeader} from "./adminHeader"
+import {AdminContent} from "./adminContent"
 
-class App extends React.Component {
+export class Admin extends React.Component {
     constructor(props) {
         super(props);
 
@@ -78,15 +77,15 @@ class App extends React.Component {
                 });
             },
             onFailure(err) {
-                App.Error("Database connection failure!" + "<br>" + err)
+                Admin.Error("Database connection failure!" + "<br>" + err)
             }
         });
     }
     render() {
         return (
             <div className="App grey lighten-3">
-                <SideBar changeFilters={this.changeFilters} categories={this.state.categories} locations={this.state.locations}/>
-                <Content items={this.state.positions}/>
+                <AdminHeader/>
+                <AdminContent items={this.state.positions}/>
             </div>
         )
     }
@@ -102,9 +101,3 @@ class App extends React.Component {
         })
     }
 }
-
-export default App;
-
-App.propTypes = {
-    base: PropTypes.object.isRequired
-};

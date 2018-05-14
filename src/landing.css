@@ -122,6 +122,13 @@ body .parallax-container nav .nav-wrapper ul li a {
     font-family: "Open-Sans", sans-serif;
     letter-spacing: 1.1px;
 }
+body .parallax-container nav .nav-wrapper span {
+    font-family: "Open-Sans-Light", sans-serif;
+    letter-spacing: 1.1px;
+    font-size: 1.8em;
+    margin: 0;
+    padding: 0;
+}
 body .parallax-container nav .nav-wrapper ul li a:visited {
     color: white !important;
 }

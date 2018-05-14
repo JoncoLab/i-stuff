@@ -1,12 +1,13 @@
 import React, {Fragment} from "react"
-import "./landing.css"
+import "../landing.css"
 import {Link} from "react-router-dom"
+import {LandingHeader} from "./landing-header"
 
 export class Landing extends React.Component {
     render() {
         return (
             <Fragment>
-                <div className="introduction-top container">
+                <div className="introduction-top container hide-on-med-and-down">
                     <div className="row">
                         <h2 className="flow-text light col m2 push-m4 s4 left-align black-text">iStaff</h2>
                         <h2 className="flow-text light col m4 push-m2 s8 right-align black-text">MADE SIMPLE</h2>
@@ -14,17 +15,7 @@ export class Landing extends React.Component {
                 </div>
 
                 <div className="parallax-container" id="index-banner main-screen main">
-                    <nav role="navigation" id="header">
-                        <div className="nav-wrapper">
-                            <ul>
-                                <li><Link to={"/vacancies"}>Vacancies</Link></li>
-                                <li><a className="white-text" href="#main">Main</a></li>
-                                <li><a className="white-text" href="#about-us">About Us</a></li>
-                                <li><a className="white-text" href="#our-employers">Our Employees</a></li>
-                                <li><a className="white-text" href="#contact-us">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </nav>
+                    <LandingHeader/>
                     <div className="container section">
 
                         <div className="row">

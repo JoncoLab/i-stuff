@@ -29,7 +29,7 @@ export class SideBar extends React.Component {
                     <li>
                         <div className="user-view">
                             <div className="background">
-                                <img className="responsive-img" src="img/workflow.jpg"/>
+                                <img className="responsive-img" src="../img/workflow.jpg"/>
                             </div>
                             <a href="#name"><span className="white-text name">Search tools</span></a>
                             <a href="#email"><span className="white-text email">Discover available positions</span></a>

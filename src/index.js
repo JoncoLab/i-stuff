@@ -10,7 +10,8 @@ import "firebase/firestore"
 import * as $ from "jquery"
 import * as M from "materialize-css"
 import {BrowserRouter, Switch, Route} from "react-router-dom"
-import {Landing} from "./landing"
+import {Landing} from "./landing/landing"
+import {Admin} from "./admin/admin"
 
 const app = firebase.initializeApp({
     apiKey: "AIzaSyCZznDaMxAe8MzMQlpFXx8SG_iKLOWRGGo",
@@ -28,6 +29,9 @@ const base = Rebase.createClass(_app);
 const AppRender = () => (
     <App base={base}/>
 );
+const AdminRender = () => (
+    <Admin base={base}/>
+);
 
 class AppDeploy extends React.Component {
     render() {
@@ -36,6 +40,7 @@ class AppDeploy extends React.Component {
                 <Switch>
                     <Route path="/vacancies" component={AppRender}/>
                     <Route exact path="/" component={Landing}/>
+                    <Route path="/admin" component={AdminRender}/>
                 </Switch>
             </Fragment>
         )
