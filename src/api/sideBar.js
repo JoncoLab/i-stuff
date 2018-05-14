@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import {Link} from "react-router-dom"
 import * as $ from "jquery";
 import * as M from "materialize-css";
+import App from "../App";
 
 export class SideBar extends React.Component {
     constructor(props) {
@@ -19,7 +20,7 @@ export class SideBar extends React.Component {
             catFilter: $("#select-cat").val(),
             locFilter: $("#select-loc").val()
         };
-        this.props.changeFilters(filters);
+        this.props.changeFilters(filters)
     }
     render() {
         return (
@@ -59,7 +60,7 @@ export class SideBar extends React.Component {
                     </li>
                     <li><div className="divider hide-on-med-and-up"> </div></li>
                     <li><a className="subheader hide-on-med-and-up">Back to</a></li>
-                    <li className="hide-on-med-and-up"><Link className="waves-effect" to={"/"}>Back to Main</Link></li>
+                    <li className="hide-on-med-and-up sidenav-close"><Link className="waves-effect" to={"/"}>Main</Link></li>
                 </ul>
             </Fragment>
         )

@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "positions": {
+      "$pos": {
+        ".read": "auth != null",
+        ".write": "auth != null",
+        ".validate": "newData.hasChildren(['name', 'description', 'category', 'location', 'date']) && newData.child('date').isNumber",
+        ".indexOn": ["location", "category"]
+      }
+    }
+  }
+}

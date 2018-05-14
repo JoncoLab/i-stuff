@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 export class Item extends React.Component {
     constructor(props) {
@@ -9,6 +10,7 @@ export class Item extends React.Component {
             hideItems: "block",
             popOutActive: false,
             vacancyData: {
+                id: this.props.id,
                 name: this.props.name,
                 category: this.props.category,
                 location: this.props.location,
@@ -46,9 +48,9 @@ export class Item extends React.Component {
     }
     itemRender() {
         let content;
-        if (this.state.itemActive === true) {
+        if (this.state.itemActive) {
             content = (
-                <div className="item grey lighten-5 z-depth-2">
+                <div className="item grey lighten-5 z-depth-2" id={this.state.vacancyData.id}>
                     <div className="row">
                         <div className="description col s12 m9">
                             <div className="row">
@@ -116,10 +118,10 @@ export class Item extends React.Component {
                         </div>
                     </div>
                 </div>
-            );
-        } else if (this.state.itemActive === false) {
+            )
+        } else if (!this.state.itemActive) {
             content = (
-                <div  className="item-preview content grey lighten-5 z-depth-2" onClick={this.itemEvent} style={{display: this.state.hideItems}}>
+                <div className="item-preview content grey lighten-5 z-depth-2" onClick={this.itemEvent} style={{display: this.state.hideItems}}>
                     <div className="row">
                         <span className="item-preview-caption flow-text grey-text text-darken-4 col s12 m6">{this.state.vacancyData.name}</span>
                         <span className="item-preview-location flow-text grey-text text-darken-1 col s6 m3 center-align">{this.state.vacancyData.location}</span>
@@ -130,13 +132,24 @@ export class Item extends React.Component {
                         <p className="item-preview-description flow-text grey-text text-darken-3 left-align col s12">{this.state.vacancyData.description}</p>
                     </div>
                 </div>
-            );
+            )
         }
         return content;
     }
 
     render() {
-        console.log(this.state.vacancyData.responsibilities.length);
         return this.itemRender()
     }
 }
+
+Item.propTypes = {
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    responsibilities: PropTypes.array.isRequired,
+    requirements: PropTypes.array.isRequired,
+    niceToHave: PropTypes.array.isRequired
+};

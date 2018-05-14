@@ -23,15 +23,15 @@ export class LandingHeader extends React.Component {
                     </div>
                 </nav>
                 <ul id="slide-out" className="sidenav">
-                    <li><Link to={"/vacancies"}>Vacancies</Link></li>
+                    <li className="sidenav-close"><Link to={"/vacancies"}>Vacancies</Link></li>
                     <li><div className="divider hide-on-med-and-up"> </div></li>
-                    <li><a className="black-text" href="#main">Main</a></li>
+                    <li className="sidenav-close"><a className="black-text" href="#main">Main</a></li>
                     <li><div className="divider hide-on-med-and-up"> </div></li>
-                    <li><a className="black-text" href="#about-us">About Us</a></li>
+                    <li className="sidenav-close"><a className="black-text" href="#about-us">About Us</a></li>
                     <li><div className="divider hide-on-med-and-up"> </div></li>
-                    <li><a className="black-text" href="#our-employers">Our Employees</a></li>
+                    <li className="sidenav-close"><a className="black-text" href="#our-employers">Our Employees</a></li>
                     <li><div className="divider hide-on-med-and-up"> </div></li>
-                    <li><a className="black-text" href="#contact-us">Contact Us</a></li>
+                    <li className="sidenav-close"><a className="black-text" href="#contact-us">Contact Us</a></li>
                 </ul>
             </Fragment>
         )

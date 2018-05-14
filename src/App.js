@@ -3,9 +3,11 @@ import './App.css';
 import {SideBar} from "./api/sideBar"
 import {Content} from "./api/content/content"
 import * as M from "materialize-css"
+import PropTypes from "prop-types"
 
 class App extends React.Component {
     _Bind;
+    _Query;
     constructor(props) {
         super(props);
 
@@ -19,14 +21,38 @@ class App extends React.Component {
             }
         };
 
+        this._Base = this.props.base;
+        this._Query = (filters) => {
+            let queries,
+                cf = filters.catFilter,
+                lf = filters.locFilter;
+            if (cf === "default" && lf === "default") {
+                queries = {
+                    orderByChild: "date"
+                }
+            } else if (lf === "default") {
+                queries = {
+                    orderByChild: "category",
+                    equalTo: lf
+                }
+            } else if (cf === "default") {
+                queries = {
+                    orderByChild: "location",
+                    equalTo: lf
+                }
+            } else {
+                // Заміняти _Bind викликом REST API
+            }
+        };
+
         this.changeFilters = this.changeFilters.bind(this);
-        this.bindPositions = this.bindPositions.bind(this);
     }
     componentWillMount() {
-        this._Bind = this.props.base.bindToState('positions', {
+        this._Bind = this._Base.bindToState('positions', {
             context: this,
             state: 'positions',
             asArray: true,
+            queries: this._Query,
             then(positions) {
                 let categories = [],
                     locations = [],
@@ -52,16 +78,48 @@ class App extends React.Component {
                 App.Error("Database connection failure!" + "<br>" + err)
             }
         });
-        console.log(this.state.positions)
+    }
+    componentDidUpdate() {
+        console.log(this._Bind)
     }
     changeFilters(filters) {
+        this._Base.removeBinding(this._Bind);
+        this._Bind = this._Base.bindToState("positions", {
+            context: this,
+            state: 'positions',
+            asArray: true,
+            queries: {
+                orderByChild: "category",
+                equalTo: "test"
+            },
+            then(positions) {
+                let categories = [],
+                    locations = [],
+                    p = positions;
+
+                for (let i in p) {
+                    if (p.hasOwnProperty(i)) {
+                        if (p[i].hasOwnProperty("category") && p[i].category.trim() !== "" && !categories.includes(p[i].category)) {
+                            categories.push(p[i].category);
+                        }
+                        if (p[i].hasOwnProperty("location") && p[i].location.trim() !== "" && !locations.includes(p[i].location)) {
+                            locations.push(p[i].location);
+                        }
+                    }
+                }
+
+                this.setState({
+                    categories: categories,
+                    locations: locations
+                });
+            },
+            onFailure(err) {
+                App.Error("Database connection failure!" + "<br>" + err)
+            }
+        });
         this.setState({
             filters: filters
         });
-        this.bindPositions();
-    }
-    bindPositions() {
-
     }
     render() {
         return (
@@ -85,3 +143,7 @@ class App extends React.Component {
 }
 
 export default App
+
+App.propTypes = {
+    base: PropTypes.object.isRequired
+};
